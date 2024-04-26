@@ -7,8 +7,13 @@ const Body = () => (
   <div className="container">
     <Background />
     <article className="article">
-      <Intro />
-      <Lockup />
+      <div className="article__column-left">
+        <Intro />
+        <Lockup />
+      </div>
+      <div className="article__column-right">
+        <Background />
+      </div>
     </article>
   </div>
 );
