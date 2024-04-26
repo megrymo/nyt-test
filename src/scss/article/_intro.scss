@@ -22,7 +22,7 @@
     margin: 0 auto;
   }
 
-  p {
+  &__paragraph {
     font-family: 'NYTCheltenhamBook';
     font-size: 3.5em;
     line-height: 39px;
@@ -39,5 +39,9 @@
     &:last-of-type {
       margin: 0 auto;
     }
+  }
+
+  &__line {
+    display: block;
   }
 }
