@@ -1,0 +1,16 @@
+$font-path: '../../assets/fonts';
+
+@font-face {
+  font-family: 'NYTCheltenhamBook';
+  src: url('#{$font-path}/NYTCheltenhamBook.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NYTCheltenhamBold';
+  src: url('#{$font-path}/NYTCheltenhamBold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'NYTCheltenhamDisplay-Demi';
+  src: url('#{$font-path}/NYTCheltenhamDisplay-Demi.otf') format('otf');
+}

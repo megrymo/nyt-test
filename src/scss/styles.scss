@@ -1,0 +1,14 @@
+@import 'core/index';
+@import 'article/intro';
+@import 'article/lockup';
+@import 'article/background';
+
+.article {
+  position: relative;
+  z-index: 40;
+  @media (max-width: $mobile) {
+    padding: 0 0 2rem;
+  }
+}
+
+
