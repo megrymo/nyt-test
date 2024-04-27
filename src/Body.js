@@ -85,7 +85,7 @@ const Body = () => {
         <OpenerImageLayout 
           width={960}
           height={1487}
-          srcPath={'./images/desktop/0_intro'}
+          srcPath="./images/0_intro/"
         />
       </article>
     </div>
