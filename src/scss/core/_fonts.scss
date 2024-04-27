@@ -5,19 +5,16 @@ $font-path: '../../assets/fonts';
   font-weight: 400;
   src: url('#{$font-path}/NYTCheltenhamBook.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'nyt-cheltenham';
   font-weight: 300;
   src: url('#{$font-path}/NYTCheltenhamLight.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'nyt-cheltenham';
   font-weight: 800;
   src: url('#{$font-path}/NYTCheltenhamBold.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'nyt-cheltenham-display';
   src: url('#{$font-path}/NYTCheltenhamDisplay-Demi.otf') format('opentype');

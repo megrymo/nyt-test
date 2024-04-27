@@ -1,10 +1,18 @@
 .lockup {
+  position: relative;
+  z-index: 10;
   padding: 100vh 0 100vh 7.42%;
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     max-width: 460px;
     margin: 0 auto;
   }
 }
+// I used the precise hexcodes and
+// font-related values given in the 
+// Figma file, but in a normal work
+// context I would consult the 
+// designer as to whether certain
+// small differences were intentional.
 .lockup__rubric {
   display: block;
   font-family: 'nyt-cheltenham';
@@ -14,7 +22,7 @@
   line-height: 1.375rem;
   letter-spacing: 0.0625rem;
   color: #c1c1c1;
-  @media (max-width: $mobile-small) {
+  @media (max-width: $mobile) {
     font-size: 1rem;
     line-height: 1rem;
     letter-spacing: 0.0625rem;
@@ -29,15 +37,12 @@
   text-transform: uppercase;
   margin: 3.125rem 0 0;
   color: #c3c3c3;
-  @media (max-width: $mobile-small) {
+  @media (max-width: $mobile) {
     margin: 1.75rem 0 0;
     font-size: 4.0625rem;
     line-height: 5.28rem;
     letter-spacing: 1.22rem;
   }  
-  &-word {
-    display: block;
-  }
 }
 .lockup__dek {
   font-family: 'nyt-cheltenham';
@@ -48,7 +53,7 @@
   color: #eaeaea;
   max-width: 28.75rem;
   margin: 0;
-  @media (max-width: $mobile-small) {
+  @media (max-width: $mobile) {
     font-size: 2.875em;
     line-height: 1.725rem;
   }

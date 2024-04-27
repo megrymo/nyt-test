@@ -10,7 +10,7 @@ body {
 a {
   color: $white;
   text-decoration: none;
-  transition: .2s ease;
+  transition: .2s ease-in-out;
   &:hover {
     opacity: .7;
   }
@@ -22,4 +22,8 @@ ul {
 }
 .line {
   display: block;
+}
+.scroller {
+  display: block;
+  height: 100vh;
 }

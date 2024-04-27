@@ -2,12 +2,15 @@ import React from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
+import Intro from './components/Intro';
 import Lockup from './components/Lockup';
+import OpenerImageLayout from './components/OpenerImageLayout';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Body = () => {
   useGSAP(() => {
+    // fade out first lines of text
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.lockup',
@@ -15,8 +18,11 @@ const Body = () => {
         start: 'top bottom',
         end: '+=50%',
       }
-    }).to(('.intro__fade'), { opacity: 0, duration: 2})
+    }).to(('.intro__fade'), { 
+      opacity: 0, duration: 2.5
+    })
 
+    // fade out last line of text
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.lockup__rubric',
@@ -24,8 +30,11 @@ const Body = () => {
         start: 'top bottom',
         end: '+=25%',
       }
-    }).to(('.intro__fade--second'), { opacity: 0, duration: 2})     
+    }).to(('.intro__fade--second'), { 
+      opacity: 0, duration: 2.5 
+    })     
 
+    // fade out first image   
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.lockup__trigger',
@@ -39,6 +48,7 @@ const Body = () => {
       ease: "power1.in",
     })    
     
+    // fade out second image
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.lockup__trigger--two',
@@ -48,65 +58,35 @@ const Body = () => {
       }
     }).to(('.image--1'), { 
       opacity: 0, 
-      duration: 2,
-      ease: "power2.out",
+      duration: 2.5,
+      ease: "power1.in",
     })
   });
 
   return (
     <div className="container">
       <article className="article">  
+        {/*      
+          Creating components here isn't strictly
+          necessary in my opinion, but it keeps
+          this file shorter therefore a little 
+          easier to read in my opinion. I am also 
+          operating from the assumption that more 
+          copy and images / collages could / would 
+          be added to this article. I structured 
+          the image directories with the same
+          thought in mind.
+        */}
         <div className="article__copy">
-          <section className="intro">
-            <p>
-              <span className="intro__fade">
-                The trembling air, time<br />
-                sliding over our bodies like<br />
-                water. All the emptiness<br />
-                around us, as well as<br />
-              </span>
-              <span className="intro__fade--second">
-                everything that remains.<br />
-              </span>
-            </p>
-          </section>
+          <Intro />
           <div className="scroller" />
           <Lockup />
         </div>
-        <div className="article__images">       
-          <div className="article__column">    
-            <img
-              src="./images/desktop/0_intro/01.jpg" 
-              className="image image--1"
-              width="960"
-              height="1487"
-              alt="flowers"
-            />
-            <img
-              src="./images/desktop/0_intro/04.jpg" 
-              className="image image--4"
-              width="960"
-              height="1487"
-              alt="flowers"
-            />                 
-          </div>
-          <div className="article__column desktop-only">
-            <img
-              src="./images/desktop/0_intro/02.jpg" 
-              className="image image--2"
-              width="960"
-              height="1487"
-              alt="flowers"
-            />
-            <img
-              src="./images/desktop/0_intro/03.jpg" 
-              className="image image--3"
-              width="960"
-              height="1487"
-              alt="flowers"
-            />         
-          </div>
-        </div>
+        <OpenerImageLayout 
+          width={960}
+          height={1487}
+          srcPath={'./images/desktop/0_intro'}
+        />
       </article>
     </div>
     )
