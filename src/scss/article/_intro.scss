@@ -1,23 +1,25 @@
 .intro {
+  position: fixed;
+  top: 0;
+  left: 7.42%;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  
+  font-family: 'nyt-cheltenham';
+  font-size: 1.9375rem;
+  line-height: 2.325rem;
+  letter-spacing: .006rem;
+  font-weight: 300;
+
   @media (max-width: $mobile) {
+    left: 0;
     align-items: center;
   }
 
-  &__paragraph {
-    font-family: 'nyt-cheltenham';
-    font-size: 1.9375rem;
-    line-height: 2.325rem;
-    letter-spacing: .006rem;
-    font-weight: 300;
-
-    @media (max-width: $mobile-small) {
-      font-size: 2.875em;
-      line-height: 1.725rem;
-    }
+  @media (max-width: $mobile-small) {
+    font-size: 2.875em;
+    line-height: 1.725rem;
   }
 }

@@ -15,7 +15,6 @@
 
   &__copy {
     position: relative;
-    padding-left: 7.42%;
     z-index: 10;
     height: 100vh;
     mix-blend-mode: luminosity;
@@ -40,4 +39,9 @@
       display: block;
     }
   }
+}
+
+.scroller {
+  display: block;
+  height: 100vh;
 }

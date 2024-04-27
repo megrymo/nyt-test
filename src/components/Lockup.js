@@ -1,17 +1,21 @@
 import React from 'react';
 
 const Lockup = () => (
-  <header className="lockup" id="lockup">
+  <header className="lockup">
     <a href="https://www.nytimes.com/section/opinion" className="lockup__rubric">
       Opinion
     </a>
     <h1 className="lockup__hed">
       To<br />
-      Fall<br />
+      <span className="lockup__trigger">
+        Fall<br />
+      </span>
       In Love<br />
       With<br />
       The<br />
-      World<br />
+      <span className="lockup__trigger--two">
+        World<br />
+      </span>
     </h1>
     <h2 className="lockup__dek">
       A late summer meditation<br />

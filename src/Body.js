@@ -8,74 +8,48 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Body = () => {
   useGSAP(() => {
-    gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: '.intro',
-        pin: '.intro',
-        start: 'top top',
-        end: '+300%',
-        markers: true
-      });
-    });
-
-    gsap.set(('.intro__fade'), {
-      opacity: 1,
-    });
-
-    gsap.set(('.intro__fade--second'), {
-      opacity: 1,
-    });
-
     gsap.timeline({ 
       scrollTrigger: {
-        trigger: '.intro',
+        trigger: '.lockup',
         scrub: true,
-        start: 'top top',
-        end: '+1%',
-        markers: true
+        start: 'top bottom',
+        end: '+=50%',
       }
     }).to(('.intro__fade'), { opacity: 0, duration: 2})
 
     gsap.timeline({ 
       scrollTrigger: {
-        trigger: '.intro',
+        trigger: '.lockup__rubric',
         scrub: true,
-        start: '+15%',
-        end: '+30%',
-        markers: true
+        start: 'top bottom',
+        end: '+=25%',
       }
-    }).to(('.intro__fade--second'), { opacity: 0, duration: 2})    
-
-    gsap.set(('.image--1'), {
-      opacity: 1,
-    });
-
-    gsap.set(('.image--2'), {
-      opacity: 1,
-    });  
+    }).to(('.intro__fade--second'), { opacity: 0, duration: 2})     
 
     gsap.timeline({ 
       scrollTrigger: {
-        trigger: '.lockup__hed',
+        trigger: '.lockup__trigger',
         start: 'top bottom',
-        end: '-100%',
-        markers: true,
+        end: 'bottom bottom',
         scrub: true,
       }
     }).to(('.image--2'), { 
-      opacity: 0, duration: 2
+      opacity: 0, 
+      duration: 2.5, 
+      ease: "power1.in",
     })    
     
     gsap.timeline({ 
       scrollTrigger: {
-        trigger: '.lockup__dek',
-        start: 'top center',
-        end: '+25%',
-        markers: true,
+        trigger: '.lockup__trigger--two',
+        start: 'bottom top',
+        end: 'bottom bottom',
         scrub: true,
       }
     }).to(('.image--1'), { 
-      opacity: 0, duration: 2
+      opacity: 0, 
+      duration: 2,
+      ease: "power2.out",
     })
   });
 
@@ -84,16 +58,19 @@ const Body = () => {
       <article className="article">  
         <div className="article__copy">
           <section className="intro">
-            <p className="intro__paragraph">
+            <p>
               <span className="intro__fade">
                 The trembling air, time<br />
                 sliding over our bodies like<br />
                 water. All the emptiness<br />
                 around us, as well as<br />
+              </span>
+              <span className="intro__fade--second">
                 everything that remains.<br />
               </span>
             </p>
           </section>
+          <div className="scroller" />
           <Lockup />
         </div>
         <div className="article__images">       
