@@ -15,7 +15,7 @@ const Intro = () => (
       <span className="intro__line">
         around us, as well as
       </span>
-      <span className="intro__line">
+      <span className="intro__line intro__line--last">
         everything that remains.
       </span>
     </p>

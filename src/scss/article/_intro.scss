@@ -1,33 +1,19 @@
 .intro {
-  padding: 12.5em;
-  width: calc(75% - 25em);
-  max-width: 96rem;
-  margin: 0 auto 25rem;
-
-  @media (max-width: $mobile) {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    border: none;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 
   &__paragraph {
     font-family: 'nyt-cheltenham';
-    font-size: 3.5em;
-    line-height: 39px;
-    margin: 2.5rem 0;
-    text-align: left;
+    font-size: 1.9375rem;
+    line-height: 2.325rem;
+    letter-spacing: .006rem;
+    font-weight: 300;
 
     @media (max-width: $mobile) {
       font-size: 2.625em;
       line-height: 1.875rem;
-      max-width: 311px;
-      margin: 1.875rem auto;
-    }
-
-    &:last-of-type {
-      margin: 0 auto;
     }
   }
 

@@ -1,13 +1,25 @@
 @import 'core/index';
 @import 'article/intro';
 @import 'article/lockup';
-@import 'article/background';
+@import 'article/images';
 
 .article {
   position: relative;
-  z-index: 40;
-  @media (max-width: $mobile) {
-    padding: 0 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  overflow: hidden;
+
+  &__copy {
+    position: relative;
+    padding-left: 14.84%;
+    z-index: 10;
+    height: 100vh;
+    mix-blend-mode: luminosity;
+  }
+
+  &__column {
+    position: relative;
   }
 }
 

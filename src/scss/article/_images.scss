@@ -1,0 +1,17 @@
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  min-width: 100%;
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+  }
+}
