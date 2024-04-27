@@ -13,6 +13,11 @@
   line-height: 1.375rem;
   letter-spacing: 0.0625rem;
   color: #c1c1c1;
+  @media (max-width: $mobile-small) {
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 0.0625rem;
+  }
 }
 .lockup__hed {
   font-family: 'nyt-cheltenham-display';
@@ -23,6 +28,12 @@
   text-transform: uppercase;
   margin: 3.125rem 0 0;
   color: #c3c3c3;
+  @media (max-width: $mobile-small) {
+    margin: 1.75rem 0 0;
+    font-size: 4.0625rem;
+    line-height: 5.28rem;
+    letter-spacing: 1.22rem;
+  }  
   &-word {
     display: block;
   }
@@ -37,4 +48,8 @@
   max-width: 28.75rem;
   margin: 0;
   padding: 0 0 3.1875rem;
+  @media (max-width: $mobile-small) {
+    font-size: 2.875em;
+    line-height: 1.725rem;
+  }
 }
