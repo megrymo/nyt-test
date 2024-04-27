@@ -1,5 +1,9 @@
 .lockup {
   padding: 0 0 100vh;
+  @media (max-width: $mobile) {
+    max-width: 460px;
+    margin: 0 auto;
+  }
 }
 .lockup__rubric {
   font-family: 'nyt-cheltenham';
@@ -12,9 +16,9 @@
 }
 .lockup__hed {
   font-family: 'nyt-cheltenham-display';
-  font-size: 7.42vw;
-  line-height: 9.65vw;
-  letter-spacing: 2.42vw;
+  font-size: 5.9375rem;
+  line-height: 7.72rem;
+  letter-spacing: 1.94rem;
   font-weight: 500;
   text-transform: uppercase;
   margin: 3.125rem 0 0;

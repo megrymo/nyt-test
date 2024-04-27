@@ -10,13 +10,10 @@ const Lockup = () => (
         To 
       </span>
       <span className="lockup__hed-word">
-        Fall 
+        Fall
       </span>
       <span className="lockup__hed-word">
-        In 
-      </span>
-      <span className="lockup__hed-word">
-        Love 
+        In Love 
       </span>
       <span className="lockup__hed-word">
         With 

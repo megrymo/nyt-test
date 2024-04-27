@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  
+  @media (max-width: $mobile) {
+    align-items: center;
+  }
 
   &__paragraph {
     font-family: 'nyt-cheltenham';
@@ -11,7 +15,7 @@
     letter-spacing: .006rem;
     font-weight: 300;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $mobile-small) {
       font-size: 2.625em;
       line-height: 1.875rem;
     }

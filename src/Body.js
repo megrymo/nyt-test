@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
@@ -7,10 +7,7 @@ import Lockup from './components/Lockup';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Body = () => {
-  const intro = useRef();
-
   useGSAP(() => {
-
     gsap.context(() => {
       ScrollTrigger.create({
         trigger: '.intro',
@@ -34,20 +31,20 @@ const Body = () => {
         trigger: '.intro',
         scrub: true,
         start: 'top top',
-        end: '+25%',
+        end: '+1%',
         markers: true
       }
-    }).to(('.intro__fade'), { opacity: 0})
+    }).to(('.intro__fade'), { opacity: 0, duration: 2})
 
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.intro',
         scrub: true,
-        start: '+25%',
-        end: '+50%',
+        start: '+15%',
+        end: '+30%',
         markers: true
       }
-    }).to(('.intro__fade--second'), { opacity: 0})    
+    }).to(('.intro__fade--second'), { opacity: 0, duration: 2})    
 
     gsap.set(('.image--1'), {
       opacity: 1,
@@ -59,14 +56,14 @@ const Body = () => {
 
     gsap.timeline({ 
       scrollTrigger: {
-        trigger: '.lockup__dek',
+        trigger: '.lockup__hed',
         start: 'top bottom',
-        end: 'bottom bottom',
+        end: '-100%',
         markers: true,
         scrub: true,
       }
     }).to(('.image--2'), { 
-      opacity: 0, duration: 1
+      opacity: 0, duration: 2
     })    
     
     gsap.timeline({ 
@@ -78,7 +75,7 @@ const Body = () => {
         scrub: true,
       }
     }).to(('.image--1'), { 
-      opacity: 0, duration: 1
+      opacity: 0, duration: 2
     })
   });
 
@@ -110,7 +107,7 @@ const Body = () => {
           <Lockup />
         </div>
         <div className="article__images">       
-          <div className="article__column article__column--left">    
+          <div className="article__column">    
             <img
               src="./images/desktop/0_intro/01.jpg" 
               className="image image--1"
@@ -126,7 +123,7 @@ const Body = () => {
               alt="flowers"
             />                 
           </div>
-          <div className="article__column article__column--right">
+          <div className="article__column desktop-only">
             <img
               src="./images/desktop/0_intro/02.jpg" 
               className="image image--2"

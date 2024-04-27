@@ -6,6 +6,11 @@
 .article {
   &__column {
     position: relative;
+    overflow: hidden;
+    @media (max-width: $mobile) {
+      width: 100vw;
+      height: 100vh;
+    }
   }
 
   &__copy {
@@ -14,6 +19,13 @@
     z-index: 10;
     height: 100vh;
     mix-blend-mode: luminosity;
+    @media (max-width: $mobile) {
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    @media (max-width: $mobile-small) {
+      width: 280px;
+    }
   }
 
   &__images {
@@ -24,5 +36,8 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $mobile) {
+      display: block;
+    }
   }
 }
