@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Lockup = () => (
-  <header className="lockup">
+  <header className="lockup" id="lockup">
     <a href="https://www.nytimes.com/section/opinion" className="lockup__rubric">
       Opinion
     </a>

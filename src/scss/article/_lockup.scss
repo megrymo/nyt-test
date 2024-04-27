@@ -9,9 +9,6 @@
 }
 .lockup__hed {
   font-family: 'nyt-cheltenham-display';
-  // font-size: 11.875rem;
-  // line-height: 15.4375rem;
-  // letter-spacing: 3.8725rem;
   font-size: 7.42vw;
   line-height: 9.65vw;
   letter-spacing: 2.42vw;
@@ -31,5 +28,6 @@
   letter-spacing: .006rem;
   color: #eaeaea;
   max-width: 28.75rem;
-  margin: 0 0 3.1875rem;
+  margin: 0;
+  padding: 0 0 3.1875rem;
 }

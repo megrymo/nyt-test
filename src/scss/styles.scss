@@ -4,23 +4,25 @@
 @import 'article/images';
 
 .article {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
-  overflow: hidden;
+  &__column {
+    position: relative;
+  }
 
   &__copy {
     position: relative;
-    padding-left: 14.84%;
+    padding-left: 7.42%;
     z-index: 10;
     height: 100vh;
     mix-blend-mode: luminosity;
   }
 
-  &__column {
-    position: relative;
+  &__images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
