@@ -55,31 +55,29 @@ const Body = () => {
 
     gsap.set(('.image--2'), {
       opacity: 1,
-    });
+    });  
 
-    gsap.set(('.image--3'), {
-      opacity: 0,
-    });
-
-    gsap.set(('.image--4'), {
-      opacity: 0,
-    });    
+    gsap.timeline({ 
+      scrollTrigger: {
+        trigger: '.lockup__dek',
+        start: 'top bottom',
+        end: 'bottom bottom',
+        markers: true,
+        scrub: true,
+      }
+    }).to(('.image--2'), { 
+      opacity: 0, duration: 1
+    })    
     
     gsap.timeline({ 
       scrollTrigger: {
         trigger: '.lockup__dek',
-        start: 'top top',
-        end: '+50%',
+        start: 'top center',
+        end: '+25%',
         markers: true,
         scrub: true,
       }
     }).to(('.image--1'), { 
-      opacity: 0, duration: 1
-    }).to(('.image--4'), { 
-      opacity: 1, duration: 1
-    }).to(('.image--3'), { 
-      opacity: 1, duration: 1
-    }).to(('.image--2'), { 
       opacity: 0, duration: 1
     })
   });
