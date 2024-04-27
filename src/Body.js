@@ -86,21 +86,11 @@ const Body = () => {
           <section className="intro">
             <p className="intro__paragraph">
               <span className="intro__fade">
-                <span className="intro__line">
-                  The trembling air, time
-                </span>
-                <span className="intro__line">
-                  sliding over our bodies like
-                </span>
-                <span className="intro__line">
-                  water. All the emptiness
-                </span>
-                <span className="intro__line">
-                  around us, as well as
-                </span>
-              </span>
-              <span className="intro__line intro__fade--second">
-                everything that remains.
+                The trembling air, time<br />
+                sliding over our bodies like<br />
+                water. All the emptiness<br />
+                around us, as well as<br />
+                everything that remains.<br />
               </span>
             </p>
           </section>

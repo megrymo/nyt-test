@@ -6,27 +6,20 @@ const Lockup = () => (
       Opinion
     </a>
     <h1 className="lockup__hed">
-      <span className="lockup__hed-word">
-        To 
-      </span>
-      <span className="lockup__hed-word">
-        Fall
-      </span>
-      <span className="lockup__hed-word">
-        In Love 
-      </span>
-      <span className="lockup__hed-word">
-        With 
-      </span>
-      <span className="lockup__hed-word">
-        The 
-      </span>
-      <span className="lockup__hed-word">
-        World
-      </span>
+      To<br />
+      Fall<br />
+      In Love<br />
+      With<br />
+      The<br />
+      World<br />
     </h1>
     <h2 className="lockup__dek">
-      A late summer meditation on time, loss, and solace in the natural world, made from the work of the photographer Mary Manning and the poet Brian Turner.
+      A late summer meditation<br />
+      on time, loss, and solace in<br />
+      the natural world, made from<br />
+      the work of the photographer<br />
+      Mary Manning and the<br />
+      poet Brian Turner.
     </h2>
   </header>
 );
