@@ -9,6 +9,8 @@ import OpenerImageLayout from './components/OpenerImageLayout';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Body = () => {
+  const awsRoot = 'https://tofallin.s3.us-east-2.amazonaws.com';
+
   useGSAP(() => {
     // fade out first lines of text
     gsap.timeline({ 
@@ -85,7 +87,7 @@ const Body = () => {
         <OpenerImageLayout 
           width={960}
           height={1487}
-          srcPath="./images/0_intro/"
+          srcPath={`${awsRoot}/images/0_intro/`}
         />
       </article>
     </div>

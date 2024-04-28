@@ -3,19 +3,19 @@ $font-path: '../../assets/fonts';
 @font-face {
   font-family: 'nyt-cheltenham';
   font-weight: 400;
-  src: url('#{$font-path}/NYTCheltenhamBook.otf') format('opentype');
+  src: url('#{$font-path}/NYTCheltenhamBook.woff') format('woff');
 }
 @font-face {
   font-family: 'nyt-cheltenham';
   font-weight: 300;
-  src: url('#{$font-path}/NYTCheltenhamLight.otf') format('opentype');
+  src: url('#{$font-path}/NYTCheltenhamLight.woff') format('woff');
 }
 @font-face {
   font-family: 'nyt-cheltenham';
   font-weight: 800;
-  src: url('#{$font-path}/NYTCheltenhamBold.otf') format('opentype');
+  src: url('#{$font-path}/NYTCheltenhamBold.woff') format('woff');
 }
 @font-face {
   font-family: 'nyt-cheltenham-display';
-  src: url('#{$font-path}/NYTCheltenhamDisplay-Demi.otf') format('opentype');
+  src: url('#{$font-path}/NYTCheltenhamDisplay-Demi.woff') format('woff');
 }
